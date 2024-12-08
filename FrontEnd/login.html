@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - Sophie Bluel</title>
     <link rel="stylesheet" href="stylelogin.css">
+    <script defer src="./js/login.js"></script>
+
 </head>
 <body>
     <header>
@@ -25,12 +27,12 @@
             <form id="login-form">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email">
-    
+        
                 <label for="password">Mot de passe</label>
                 <input type="password" id="password" name="password">
-    
+        
                 <button type="submit">Se connecter</button>
-                <a href="#" class="forgot-password">Mot de passe oublié</a>
+                <div id="error-message" style="color: red; margin-top: 10px;"></div>
             </form>
         </section>
     </main>
@@ -41,4 +43,3 @@
     </footer>
 </body>
 </html>
-

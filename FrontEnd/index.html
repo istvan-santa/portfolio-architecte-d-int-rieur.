@@ -36,6 +36,7 @@
 	</section>
 	<section id="portfolio">
 		<h2>Mes Projets</h2>
+		<button id="open-modal" class="modify-btn">Modifier</button>
 		<div class="gallery">
 			<!-- Contenu dynamique ajouté via JavaScript -->
 		</div>
@@ -66,7 +67,34 @@
 	</nav>
 </footer>
 
+<div id="modal" class="hidden modal">
+    <div class="modal-content" >
+        <button id="close-modal" class="close-btn">&times;</button>
+        <!-- Vue Galerie Photo -->
+        <div id="modal-gallery">
+            <h2>Galerie Photo</h2>
+            <div id="gallery-content">
+                <!-- Les projets existants seront affichés ici -->
+            </div>
+            <button id="add-photo-btn" class="modal-action-btn">Ajouter une photo</button>
+        </div>
+        <!-- Vue Ajout Photo -->
+        <div id="modal-add-photo" class="hidden">
+			<button id="back-arrow" class="back-btn">&larr;</button>
+            <h2>Ajouter une Photo</h2>
+            <form id="add-photo-form">
+                <label for="photo-title">Titre</label>
+                <input type="text" id="photo-title" name="title" required>
+                <label for="photo-file">Image</label>
+                <input type="file" id="photo-file" name="file" accept="image/*" required>
+                <button type="submit" class="modal-action-btn">Ajouter</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- Charger le script JavaScript -->
 <script src="main.js"></script>
+
 </body>
 </html>
