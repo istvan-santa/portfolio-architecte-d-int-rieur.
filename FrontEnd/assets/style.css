@@ -186,6 +186,16 @@ footer nav ul {
 	margin: 2em
 }
 
+.filters {
+	background: #1D6154;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
 .filters button.active {
 	background-color: #007BFF;
 	color: white;
@@ -216,6 +226,24 @@ footer nav ul {
     align-items: center;
     z-index: 1000;
 }
+
+#modal .gallery img {
+    width: 100px; /* Taille réduite */
+    height: auto; /* Maintient le ratio */
+    object-fit: cover;
+    margin: 10px; /* Espacement entre les images */
+    border: 1px solid #ccc; /* Optionnel : bordure pour démarquer */
+    border-radius: 5px; /* Optionnel : coins arrondis */
+}
+
+#gallery-content .small-image {
+    width: 100px; /* Taille réduite */
+    height: auto;
+    margin: 10px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
 
 .hidden {
     display: none;
@@ -268,4 +296,158 @@ footer nav ul {
     color: #B1663C; /* Effet au survol */
 }
 
-  
+/* Conteneur de chaque projet */
+.project-item {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Image réduite */
+.project-item img {
+    width: 100px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Icône de suppression */
+.delete-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgb(2, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icône au survol */
+.delete-icon:hover {
+    background: rgb(56, 54, 54);
+}
+
+
+/* Conteneur principal de la vue "Ajout photo" */
+#modal-add-photo {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Titre */
+#modal-add-photo h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Zone d'ajout de photo */
+.photo-preview {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #666;
+}
+
+.upload-area img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.upload-area p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.upload-area small {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Input file caché */
+.hidden {
+    display: none;
+}
+
+/* Formulaire */
+#add-photo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#add-photo-form label {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+#add-photo-form input,
+#add-photo-form select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#validate-btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #ccc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: not-allowed;
+}
+
+#validate-btn.active {
+    background-color: #1D6154;
+    cursor: pointer;
+}
+
+/* Flèche de retour et croix */
+.back-btn,
+.close-btn {
+    position: absolute;
+    top: 10px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.back-btn {
+    left: 10px;
+}
+
+.close-btn {
+    right: 10px;
+}

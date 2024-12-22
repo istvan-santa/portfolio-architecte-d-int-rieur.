@@ -79,15 +79,32 @@
             <button id="add-photo-btn" class="modal-action-btn">Ajouter une photo</button>
         </div>
         <!-- Vue Ajout Photo -->
-        <div id="modal-add-photo" class="hidden">
+		<div id="modal-add-photo" class="hidden">
+			<!-- Flèche pour revenir à la galerie -->
 			<button id="back-arrow" class="back-btn">&larr;</button>
-            <h2>Ajouter une Photo</h2>
-            <form id="add-photo-form">
-                <label for="photo-title">Titre</label>
-                <input type="text" id="photo-title" name="title" required>
-                <label for="photo-file">Image</label>
-                <input type="file" id="photo-file" name="file" accept="image/*" required>
-                <button type="submit" class="modal-action-btn">Ajouter</button>
+			<!-- Croissance pour fermer la modale -->
+			<button id="close-modal" class="close-btn">&times;</button>
+			<!-- Contenu principal -->
+			<h2>Ajout photo</h2>
+			<div id="photo-preview" class="photo-preview">
+				<label for="photo-file" class="upload-area">
+					<img src="assets/images/image.png" alt="Image par défaut" class="default-icon">
+					<p>+ Ajouter photo</p>
+					<small>jpg, png : 4mo max</small>
+				</label>
+				<input type="file" id="photo-file" name="file" accept="image/png, image/jpeg" class="hidden">
+			</div>
+			<form id="add-photo-form">
+				<label for="photo-title">Titre</label>
+				<input type="text" id="photo-title" name="title" placeholder="Entrez le titre" required>
+				<label for="photo-category">Catégorie</label>
+				<select id="photo-category" name="category" required>
+					<option value="" disabled selected>Choisir une catégorie</option>
+					<!-- Les options seront ajoutées dynamiquement -->
+				</select>
+				<button type="submit" id="validate-btn" class="validate-btn disabled" disabled>Valider</button>
+			</form>
+		</div>
             </form>
         </div>
     </div>
